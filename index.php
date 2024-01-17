@@ -9,11 +9,13 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>ONLINE DICE</h1>
-    <h2>CHOOSE YOUR DICE</h2>
+    <img src="./images/logo.png" class="logo-image" alt="404">
+    
     <div class="wrapper">
         <form action="" method="post">
+        <h2>CHOOSE YOUR DICE</h2>
             <div class="select-wrapper">
+            
             <div class="dice-amount">
             <select name="dice-amount" id="dice-amount">
                 <!-- <option value="1">1 DIE</option>
@@ -34,20 +36,12 @@
                 <option value="colour">COLOR DICE</option>
             </select>
          </div>
-
-         <!-- Roll Dice Area -->
-    <!-- <div class="tabletop">
-        <div class="dice-wrapper size-100 rounded-dice">
-            <i class="df-solid-small-dot-d6-6">
-        </div> -->
-    
-        <!-- <i class="df-solid-small-dot-d6-6"> -->
-    
-    
     </div>
+
+    
 <div class="roll-area">
 
-<div class="dice dice-one"><i class="fa-solid fa-dice-one fa-5x icon"></i></div>
+<div class="dice dice-one"><i class="fa-solid fa-dice-one fa-5x fa-border icon"></i></div>
 <div class="dice dice-two"><i class="fa-solid fa-dice-two fa-5x"></i></div>
 <div class="dice dice-three"><i class="fa-solid fa-dice-three fa-5x"></i></div>
 <div class="dice dice-four"><i class="fa-solid fa-dice-four fa-5x"></i></div>
@@ -57,8 +51,11 @@
 
 
     </div>
+    <div class="roll-button-wrapper">
+          <input class="roll-button" type="submit" value="ROLL !">  
+    </div>
          </div>
-  <input type="submit" value="ROLL !">
+  
 </form>
 
 
