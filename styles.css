@@ -7,6 +7,11 @@ body{
     font-family: marvin;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 20px;
+    background-image: url('./images/background.png');
+    background-repeat: repeat;
+    background-size: 500px; /* Adjust this value based on your image size */
+    position: relative;
 }
 
 .wrapper{
@@ -22,18 +27,16 @@ body{
     justify-content: center;
 }
 
-
-
 .roll-area {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 0;
     justify-content: center;
 }
 
 .dice {
-    flex: 1 0 calc(16.6667% - 10px); /* Set initial width, subtracting margin */
-    max-width: calc(16.6667% - 10px); /* Set maximum width */
+    flex: 1 0 calc(16.6667% - 15px); /* Set initial width, subtracting margin */
+    max-width: calc(16.6667% - 15px); /* Set maximum width */
     box-sizing: border-box;
     text-align: center;
     height: 100%;
