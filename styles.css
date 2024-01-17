@@ -5,3 +5,8 @@
 body{
     font-family: marvin;
 }
+.select-wrapper{
+    display: flex;
+    flex-direction: row;
+    gap: 20rem;
+}
