@@ -47,14 +47,13 @@
     </div>
 <div class="roll-area">
 
-<div class="dice dice-one"><i class="fa-solid fa-dice-one"></i></div>
-<div class="dice dice-two"><i class="fa-solid fa-dice-two"></i></div>
-<div class="dice dice-three"><i class="fa-solid fa-dice-three"></i></div>
-<div class="dice dice-four"><i class="fa-solid fa-dice-four"></i></div>
-<div class="dice dice-five"><i class="fa-solid fa-dice-five"></i></div>
-<div class="dice dice-six"><i class="fa-solid fa-dice-six"></i></div>
-
-
+<div class="dice dice-one"><i class="fa-solid fa-dice-one fa-5x icon"></i></div>
+<div class="dice dice-two"><i class="fa-solid fa-dice-two fa-5x"></i></div>
+<div class="dice dice-three"><i class="fa-solid fa-dice-three fa-5x"></i></div>
+<div class="dice dice-four"><i class="fa-solid fa-dice-four fa-5x"></i></div>
+<div class="dice dice-five"><i class="fa-solid fa-dice-five fa-5x"></i></div>
+<div class="dice dice-six"><i class="fa-solid fa-dice-six fa-5x"></i></div>
+<div class="dice dice-seven"><i class="fa-solid fa-dice-six fa-5x"></i></div>
 
 
     </div>

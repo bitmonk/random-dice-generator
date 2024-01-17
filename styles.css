@@ -20,23 +20,28 @@ body{
     flex-direction: row;
     gap: 30rem;
     justify-content: center;
-    /* height: 500px; */
 }
-/* .form-wrapper{
-    display: flex;
-    align-items: center;
-} */
 
-.roll-area{
-    height: 400px;
-}
+
 
 .roll-area {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-    gap: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
 }
 
 .dice {
+    flex: 1 0 calc(16.6667% - 10px); /* Set initial width, subtracting margin */
+    max-width: calc(16.6667% - 10px); /* Set maximum width */
+    box-sizing: border-box;
     text-align: center;
+    height: 100%;
+    padding: 10px;
 }
+
+/* .icon{
+    border: 5px solid red;
+    border-radius: 20px;
+    height: 100%;
+} */
