@@ -43,12 +43,12 @@
 
 <div class="roll-area">
 
-<div class="dice dice-one"><i class="fa-solid fa-dice-one fa-5x"></i></div>
+<!-- <div class="dice dice-one"><i class="fa-solid fa-dice-one fa-5x"></i></div>
 <div class="dice dice-two"><i class="fa-solid fa-dice-two fa-5x"></i></div>
 <div class="dice dice-three"><i class="fa-solid fa-dice-three fa-5x"></i></div>
 <div class="dice dice-four"><i class="fa-solid fa-dice-four fa-5x"></i></div>
 <div class="dice dice-five"><i class="fa-solid fa-dice-five fa-5x"></i></div>
-<div class="dice dice-six"><i class="fa-solid fa-dice-six fa-5x"></i></div>
+<div class="dice dice-six"><i class="fa-solid fa-dice-six fa-5x"></i></div> -->
     </div>
     
     <div class="result-wrapper">
@@ -75,33 +75,40 @@
         var results = [];
         var totalResult = 0;
 
+        var selectedDiceClasses = [];
+
+
         for (let i = 0; i < numDice; i++) {
-    // Array of dice class names
-    const diceClasses = ['dice-one', 'dice-two', 'dice-three', 'dice-four', 'dice-five', 'dice-six'];
+        // Array of dice class names
+            const diceClasses = ['dice-one', 'dice-two', 'dice-three', 'dice-four', 'dice-five', 'dice-six'];
 
-    // Get a random index from the array
-    const randomIndex = Math.floor(Math.random() * diceClasses.length);
+            // Get a random index from the array
+            const randomIndex = Math.floor(Math.random() * diceClasses.length);
 
-    // Apply the selected class to a random dice element
-    const randomDiceElement = document.querySelector(`.dice.${diceClasses[randomIndex]}`);
 
-    var diceResult = Math.floor(Math.random() * numSides) + 1;
-    results.push(diceResult);
-    totalResult += diceResult;
+            selectedDiceClasses.push({ class: diceClasses[randomIndex], index: randomIndex+1 });
 
-    console.log(diceResult);
+            // Apply the selected class to a random dice element
+            const randomDiceElement = document.querySelector(`.dice.${diceClasses[randomIndex]}`);
 
-    var diceDiv = document.createElement("div");
-    diceDiv.className = "dice " + diceClasses[randomIndex]; // Use the random class here
+            var diceResult = Math.floor(Math.random() * numSides) + 1;
+            results.push(diceResult);
+            totalResult += diceResult;
 
-    var diceIcon = document.createElement("i");
-    diceIcon.className = "fa-solid fa-" + diceClasses[randomIndex] + " fa-5x icon"; // Use the same random class here
+            console.log(diceResult);
 
-    diceDiv.appendChild(diceIcon);
-    rollArea.appendChild(diceDiv);
+            var diceDiv = document.createElement("div");
+            diceDiv.className = "dice " + diceClasses[randomIndex]; // Use the random class here
 
-    console.log(randomDiceElement);
-}
+            var diceIcon = document.createElement("i");
+             diceIcon.className = "fa-solid fa-" + diceClasses[randomIndex] + " fa-5x icon"; // Use the same random class here
+
+            diceDiv.appendChild(diceIcon);
+            rollArea.appendChild(diceDiv);
+
+            console.log(randomDiceElement);
+            console.log(selectedDiceClasses);
+            }
 
         
         if (numSides === 'colour') {
