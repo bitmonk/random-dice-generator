@@ -77,8 +77,23 @@ h3{
     text-align: center;
     height: 80px;
     color: #ffffff;
+}
 
-    
+.bi-trianble{
+    color: white;
+}
+
+/* svg{
+    position: absolute;
+} */
+.four-sided{
+    display: flex;
+    align-items: center;
+}
+
+.four-result{
+    position: absolute;
+    left: 50%
 }
 
 select{
@@ -138,3 +153,32 @@ justify-content: center;
     display: flex;
     justify-content: center;
 }
+
+.four-sided-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 1.2rem;
+    height: 100%;
+    width: 100%;
+}
+
+.four-sided {
+    justify-content: center;
+    align-items: center;
+    width: 0px;
+   height: 0px;
+   border-style: solid;
+   border-width: 0 40px 69.3px 40px;
+   border-color: transparent transparent #FFFFFF transparent;
+   transform: rotate(0deg);/* Adjust the height of the triangle as needed */
+  }
+  
+  .four-sided p {    
+    position: absolute;
+    color:#4CACFF;
+    /* Adjust the font size as needed */
+    top: 2rem;
+  }

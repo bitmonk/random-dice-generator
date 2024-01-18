@@ -8,6 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.cdnfonts.com/css/marvin" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
                 
 
 </head>
@@ -49,8 +50,41 @@
 <div class="dice dice-four"><i class="fa-solid fa-dice-four fa-5x"></i></div>
 <div class="dice dice-five"><i class="fa-solid fa-dice-five fa-5x"></i></div>
 <div class="dice dice-six"><i class="fa-solid fa-dice-six fa-5x"></i></div> -->
+
+
+
+
+
+
+
+<div class="four-sided-wrapper">
+
+    <div class="four-sided">
+        <p class="four-sided-number four-sided-one">1</p>
+        </div>
+
+    <div class="four-sided">
+    <p class="four-sided-number four-sided-two">2</p>
     </div>
     
+ 
+   <div class="four-sided">
+        <p class="four-sided-number four-sided-three">3</p>
+        </div>
+
+<div class="four-sided">
+        <p class="four-sided-number four-sided-four">4</p>
+</div>
+
+</div>
+
+    </div>
+    
+
+
+
+
+
     <div class="result-wrapper">
     <p id="result">RESULT</p>
     </div>
@@ -64,66 +98,11 @@
 
 
 
-<script>
-    function rollDice() {
-        var numDice = document.getElementById('dice-amount').value;
-        var numSides = document.getElementById('sided').value;
-
-        var rollArea = document.querySelector('.roll-area');
-        rollArea.innerHTML = ''; // Clear previous dice icons
-
-        var results = [];
-        var totalResult = 0;
-
-        var selectedDiceClasses = [];
-
-
-        for (let i = 0; i < numDice; i++) {
-        // Array of dice class names
-            const diceClasses = ['dice-one', 'dice-two', 'dice-three', 'dice-four', 'dice-five', 'dice-six'];
-
-            // Get a random index from the array
-            const randomIndex = Math.floor(Math.random() * diceClasses.length);
-
-
-            selectedDiceClasses.push({ class: diceClasses[randomIndex], index: randomIndex+1 });
-
-            // Apply the selected class to a random dice element
-            const randomDiceElement = document.querySelector(`.dice.${diceClasses[randomIndex]}`);
-
-            var diceResult = Math.floor(Math.random() * numSides) + 1;
-            results.push(diceResult);
-            totalResult += diceResult;
-
-            console.log(diceResult);
-
-            var diceDiv = document.createElement("div");
-            diceDiv.className = "dice " + diceClasses[randomIndex]; // Use the random class here
-
-            var diceIcon = document.createElement("i");
-             diceIcon.className = "fa-solid fa-" + diceClasses[randomIndex] + " fa-5x icon"; // Use the same random class here
-
-            diceDiv.appendChild(diceIcon);
-            rollArea.appendChild(diceDiv);
-
-            console.log(randomDiceElement);
-            console.log(selectedDiceClasses);
-            }
-
-        
-        if (numSides === 'colour') {
-            var randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
-
-            document.getElementById('result').innerHTML = 'Result: <span style="color:' + randomColor + ';">' + randomColor + '</span>';
-        } else {
-            document.getElementById('result').innerText = results.join(' ');
-            document.getElementById('result').innerHTML += '<br>Result: ' + totalResult;
-        }
-    }
-</script>
+<script src="script.js"></script>
 
 
 <script src="https://kit.fontawesome.com/e8b54f58bf.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 <script src="app.js"></script>
 </body>
 </html>
