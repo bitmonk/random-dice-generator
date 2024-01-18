@@ -52,6 +52,10 @@
 <div class="dice dice-six"><i class="fa-solid fa-dice-six fa-5x"></i></div> -->
 
 
+<!-- <div class="eight-sided">
+        <p class="eight-sided-number">1</p>
+        </div> -->
+
 
 
 
@@ -72,13 +76,17 @@
         <p class="four-sided-number four-sided-three">3</p>
         </div>
 
-<div class="four-sided">
+<!-- <div class="four-sided">
         <p class="four-sided-number four-sided-four">4</p>
-</div>
+</div> -->
 
 </div>
 
     </div>
+
+        
+
+
     
 
 

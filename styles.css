@@ -160,7 +160,7 @@ justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     flex-direction: row;
-    gap: 1.2rem;
+    gap: 4rem;
     height: 100%;
     width: 100%;
 }
@@ -181,4 +181,24 @@ justify-content: center;
     color:#4CACFF;
     /* Adjust the font size as needed */
     top: 2rem;
+  }
+
+
+  .eight-sided{
+    height: 60px;
+    width: 60px;
+    background-color: #ffffff;
+    transform: rotate(45deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+  .eight-sided-number{
+    display: inline-block;
+    transform: rotate(-45deg);
+    font-size: 30px;
+    color: #0088FF;
+    padding-right: 0.7rem;
+    padding-top: 0.4rem;
   }
