@@ -46,6 +46,7 @@ function rollDice() {
         
             // Set the color for the recently created dice element
             diceDiv.style.color = '#ffffff';
+            fourSidedArea.style.gap = '1rem';
         }
         
 
@@ -54,6 +55,7 @@ function rollDice() {
 
 
     } else if (numSides === '8') {
+        fourSidedArea.style.gap = '4rem';
         for (let i = 0; i < numDice; i++) {
             let randomNumber = Math.floor(Math.random() * 8) + 1;
     
