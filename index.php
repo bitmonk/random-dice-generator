@@ -13,6 +13,7 @@
 
 </head>
 <body>
+
     <img src="./images/logo.png" class="logo-image" alt="404">
     
     <div class="wrapper">
@@ -44,6 +45,13 @@
 
 <div class="roll-area">
 
+    
+   
+    
+
+
+
+
 <!-- <div class="dice dice-one"><i class="fa-solid fa-dice-one fa-5x"></i></div>
 <div class="dice dice-two"><i class="fa-solid fa-dice-two fa-5x"></i></div>
 <div class="dice dice-three"><i class="fa-solid fa-dice-three fa-5x"></i></div>
@@ -63,7 +71,7 @@
 
 <div class="four-sided-wrapper">
 
-    <div class="four-sided">
+    <!-- <div class="four-sided">
         <p class="four-sided-number four-sided-one">1</p>
         </div>
 
@@ -74,11 +82,28 @@
  
    <div class="four-sided">
         <p class="four-sided-number four-sided-three">3</p>
-        </div>
+        </div> -->
 
-<!-- <div class="four-sided">
-        <p class="four-sided-number four-sided-four">4</p>
-</div> -->
+        <div class="four-sided">
+    <i class="bi bi-triangle"></i>
+    <p class="four-sided-number">3</p>
+    </div>
+
+    <!-- <div class="eight-sided">
+    <i class="bi bi-diamond"></i>
+    </div>
+
+    <div class="ten-sided">
+        <i class="bi bi-pentagon"></i>
+    </div>
+
+    <div class="twelve-sided">
+    <i class="bi bi-hexagon"></i>
+    </div>
+
+    <div class="twenty-sided">
+        <i class="bi bi-octagon"></i>
+    </div> -->
 
 </div>
 

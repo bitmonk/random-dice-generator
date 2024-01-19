@@ -160,45 +160,103 @@ justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     flex-direction: row;
-    gap: 4rem;
+    column-gap: 4rem;
+    row-gap: 0;
     height: 100%;
     width: 100%;
 }
 
+
+/* four sided dice */
 .four-sided {
     justify-content: center;
     align-items: center;
-    width: 0px;
-   height: 0px;
-   border-style: solid;
-   border-width: 0 40px 69.3px 40px;
-   border-color: transparent transparent #FFFFFF transparent;
-   transform: rotate(0deg);/* Adjust the height of the triangle as needed */
+  }
+
+  .four-sided-number{
+    position: absolute;
+    font-size: 2rem;
+    color: white;
+  }
+
+  .bi-triangle{
+    color: white;
+    font-size: 5rem;
   }
   
-  .four-sided p {    
-    position: absolute;
-    color:#4CACFF;
-    /* Adjust the font size as needed */
-    top: 2rem;
-  }
 
+/* eight sided dice */
 
-  .eight-sided{
-    height: 60px;
-    width: 60px;
-    background-color: #ffffff;
-    transform: rotate(45deg);
+.eight-sided {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
   }
+
   .eight-sided-number{
-    display: inline-block;
-    transform: rotate(-45deg);
-    font-size: 30px;
-    color: #0088FF;
-    padding-right: 0.7rem;
-    padding-top: 0.4rem;
+    position: absolute;
+    font-size: 2rem;
+    color: white;
+  }
+
+  .bi-diamond{
+    color: white;
+    font-size: 5rem;
+  }
+
+  /* ten sided dice */
+
+  .ten-sided {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .ten-sided-number{
+    position: absolute;
+    font-size: 2rem;
+    color: white;
+  }
+
+  .bi-pentagon{
+    color: white;
+    font-size: 5rem;
+  }
+
+  /* twelve sided dice */
+
+  .twelve-sided {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .twelve-sided-number{
+    position: absolute;
+    font-size: 2rem;
+    color: white;
+  }
+
+  .bi-hexagon{
+    color: white;
+    font-size: 5rem;
+  }
+
+  /* twenty sided dice */
+
+  .twenty-sided {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .twenty-sided-number{
+    position: absolute;
+    font-size: 2rem;
+    color: white;
+  }
+
+  .bi-octagon{
+    color: white;
+    font-size: 5rem;
   }
