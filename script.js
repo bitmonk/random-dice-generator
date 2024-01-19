@@ -170,35 +170,28 @@ else if (numSides === '20') {
     resultArea.textContent = 'RESULT: ' + totalResult;
 }
 else if (numSides === 'colour') {
-    var randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
-
-    // Create only one colored dice
-    const diceClasses = ['dice-one'];
-    const randomIndex = Math.floor(Math.random() * diceClasses.length);
+    var colorNames = ['Red', 'Blue', 'Green', 'Yellow', 'Purple', 'Orange', 'Purple', 'Maroon','Gray','Fuchsia'];
+    const randomIndex = Math.floor(Math.random() * colorNames.length);
+    var randomColorName = colorNames[randomIndex];
 
     var diceDiv = document.createElement("div");
-    diceDiv.className = "dice " + diceClasses[randomIndex];
+    diceDiv.className = "dice";
 
     var diceIcon = document.createElement("i");
-    diceIcon.className = "fa-solid fa-" + diceClasses[randomIndex] + " fa-5x icon";
-
+    diceIcon.className = "fa-solid fa-dice-one fa-5x icon";
     diceDiv.appendChild(diceIcon);
     fourSidedArea.appendChild(diceDiv);
 
-    totalResult += randomIndex + 1;
+    diceDiv.style.color = randomColorName;
 
-    // Set the color for the single dice element
-    diceDiv.style.color = randomColor;
-
-    // Set the color for all the dice elements
     var allDiceDivs = document.getElementsByClassName('dice');
     for (let j = 0; j < allDiceDivs.length; j++) {
-        allDiceDivs[j].style.color = randomColor;
+        allDiceDivs[j].style.color = randomColorName;
     }
 
-    // Display the total result along with the color
+
     var resultArea = document.getElementById('result');
-    resultArea.textContent = 'RESULT:'  + randomColor ;
+    resultArea.textContent = 'RESULT: ' + randomColorName;
 } 
     else {
         document.getElementById('result').innerHTML = 'Result:' + totalResult;

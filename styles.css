@@ -177,6 +177,7 @@ justify-content: center;
     position: absolute;
     font-size: 2rem;
     color: white;
+    padding-top: 1.5rem;
   }
 
   .bi-triangle{
