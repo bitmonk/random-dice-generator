@@ -45,11 +45,6 @@
 
 <div class="roll-area">
 
-    
-   
-    
-
-
 
 
 <!-- <div class="dice dice-one"><i class="fa-solid fa-dice-one fa-5x"></i></div>

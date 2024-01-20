@@ -15,12 +15,12 @@ document.addEventListener("DOMContentLoaded", function () {
                     if (index === diceIcons.length - 1) {
                         setTimeout(function () {
                             window.location.href = "home.php";
-                        }, Math.floor(Math.random() * 200) + 50);
+                        }, Math.floor(Math.random() * 100) + 50); // Adjusted delay
                     }
 
                     showHideIcons(index + 1);
-                }, Math.floor(Math.random() * 200) + 50); // Random delay between showing and hiding
-            }, Math.floor(Math.random() * 200) + 50 * index); // Random delay for each icon
+                }, Math.floor(Math.random() * 100) + 50); // Adjusted delay for hiding
+            }, Math.floor(Math.random() * 100) + 50 * index); // Adjusted delay for showing
         }
     }
 

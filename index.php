@@ -20,6 +20,7 @@
 <div class="intro-area">
 
 <h1 class="title">LETS ROLL !</h1>
+<!-- <audio id="audio" src="http://music.mp3"></audio> -->
 
 <div class="dice-icons">
 

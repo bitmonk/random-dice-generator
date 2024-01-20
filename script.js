@@ -1,3 +1,5 @@
+
+
 function rollDice() {
     var numDice = document.getElementById('dice-amount').value;
     var numSides = document.getElementById('sided').value;
@@ -6,6 +8,8 @@ function rollDice() {
     fourSidedArea.innerHTML = '';
 
     var totalResult = 0;
+
+
 
     if (numSides === '4') {
         for (let i = 0; i < numDice; i++) {
@@ -33,6 +37,8 @@ function rollDice() {
         // Display the total result (sum of all dice rolls)
         var resultArea = document.getElementById('result');
         resultArea.textContent = 'RESULT: ' + totalResult;
+
+        fourAnimation(numDice, 1700);
     } else if (numSides === '6') {
         
         for (let i = 0; i < numDice; i++) {
@@ -197,3 +203,58 @@ else if (numSides === 'colour') {
         document.getElementById('result').innerHTML = 'Result:' + totalResult;
     }
 }
+
+function fourAnimation(numDice, duration) {
+    console.log("Four animation..");
+
+    var animationArea = document.createElement("div");
+    animationArea.className = "four-animation";
+
+    var rollDiv = document.createElement("div");
+    rollDiv.className = "four-animation-roll";
+
+    var rollTitle = document.createElement("h2");
+        rollTitle.className = "title4";
+        rollTitle.innerHTML = "FINGERS CROSSED !";
+
+        animationArea.appendChild(rollTitle);
+
+    // Create four-sided-number divs initially
+    for (let i = 0; i < numDice; i++) {
+        var diceDiv = document.createElement("div");
+        diceDiv.className = "four-roll";
+
+        var diceShape = document.createElement("i");
+        diceShape.className = "bi bi-triangle";
+
+        var diceNumber = document.createElement("p");
+        diceNumber.className = "four-sided-number";
+
+        diceDiv.appendChild(diceShape);
+        diceDiv.appendChild(diceNumber);
+        rollDiv.appendChild(diceDiv);
+    }
+
+    function updateDiceNumbers() {
+        for (let i = 0; i < numDice; i++) {
+            let randomNumber = Math.floor(Math.random() * 4) + 1; // Adjust the range as needed
+            var diceDiv = rollDiv.children[i];
+            var diceNumber = diceDiv.querySelector(".four-sided-number");
+            diceNumber.innerHTML = randomNumber;
+        }
+    }
+
+    // Set an interval to update dice numbers every 100 milliseconds (adjust as needed)
+    var intervalId = setInterval(updateDiceNumbers, 100);
+
+    animationArea.appendChild(rollDiv);
+    document.body.appendChild(animationArea);
+
+    // Clear the interval after the specified duration
+    setTimeout(function () {
+        clearInterval(intervalId);
+        document.body.removeChild(animationArea);
+    }, duration);
+}
+
+
