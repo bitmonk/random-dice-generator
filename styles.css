@@ -51,6 +51,11 @@ h3{
   left: 40%;
 }
 
+.color-roll{
+  color: #ffff;
+  font-size: 5rem;
+}
+
 
 .wrapper{
     display: flex;

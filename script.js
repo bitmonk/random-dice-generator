@@ -92,6 +92,8 @@ function rollDice() {
         // Display the total result (sum of all dice rolls)
         var resultArea = document.getElementById('result');
         resultArea.textContent = 'RESULT: ' + totalResult;
+
+        eightAnimation(numDice, 1700);
     
 }else if (numSides === '10') {
     for (let i = 0; i < numDice; i++) {
@@ -120,6 +122,8 @@ function rollDice() {
     var resultArea = document.getElementById('result');
     resultArea.textContent = 'RESULT: ' + totalResult;
 
+    tenAnimation(numDice, 1700);
+
 }
 else if (numSides === '12') {
     for (let i = 0; i < numDice; i++) {
@@ -147,6 +151,8 @@ else if (numSides === '12') {
     // Display the total result (sum of all dice rolls)
     var resultArea = document.getElementById('result');
     resultArea.textContent = 'RESULT: ' + totalResult;
+
+    twelveAnimation(numDice, 1700);
 }
 else if (numSides === '20') {
     for (let i = 0; i < numDice; i++) {
@@ -174,6 +180,8 @@ else if (numSides === '20') {
     // Display the total result (sum of all dice rolls)
     var resultArea = document.getElementById('result');
     resultArea.textContent = 'RESULT: ' + totalResult;
+
+    twentyAnimation(numDice, 1700);
 }
 else if (numSides === 'colour') {
     var colorNames = ['Red', 'Blue', 'Green', 'Yellow', 'Purple', 'Orange', 'Purple', 'Maroon','Gray','Fuchsia'];
@@ -198,6 +206,8 @@ else if (numSides === 'colour') {
 
     var resultArea = document.getElementById('result');
     resultArea.textContent = 'RESULT: ' + randomColorName;
+
+    colorAnimation();
 } 
     else {
         document.getElementById('result').innerHTML = 'Result:' + totalResult;
@@ -258,3 +268,266 @@ function fourAnimation(numDice, duration) {
 }
 
 
+
+
+
+// for eight sided animation
+
+function eightAnimation(numDice, duration) {
+
+
+    var animationArea = document.createElement("div");
+    animationArea.className = "four-animation";
+
+    var rollDiv = document.createElement("div");
+    rollDiv.className = "four-animation-roll";
+
+    var rollTitle = document.createElement("h2");
+        rollTitle.className = "title4";
+        rollTitle.innerHTML = "FINGERS CROSSED !";
+
+        animationArea.appendChild(rollTitle);
+
+    // Create four-sided-number divs initially
+    for (let i = 0; i < numDice; i++) {
+        var diceDiv = document.createElement("div");
+        diceDiv.className = "four-roll";
+
+        var diceShape = document.createElement("i");
+        diceShape.className = "bi bi-diamond";
+
+        var diceNumber = document.createElement("p");
+        diceNumber.className = "four-sided-number";
+
+        diceDiv.appendChild(diceShape);
+        diceDiv.appendChild(diceNumber);
+        rollDiv.appendChild(diceDiv);
+    }
+
+    function updateDiceNumbers() {
+        for (let i = 0; i < numDice; i++) {
+            let randomNumber = Math.floor(Math.random() * 8) + 1; // Adjust the range as needed
+            var diceDiv = rollDiv.children[i];
+            var diceNumber = diceDiv.querySelector(".four-sided-number");
+            diceNumber.innerHTML = randomNumber;
+        }
+    }
+
+    // Set an interval to update dice numbers every 100 milliseconds (adjust as needed)
+    var intervalId = setInterval(updateDiceNumbers, 100);
+
+    animationArea.appendChild(rollDiv);
+    document.body.appendChild(animationArea);
+
+    // Clear the interval after the specified duration
+    setTimeout(function () {
+        clearInterval(intervalId);
+        document.body.removeChild(animationArea);
+    }, duration);
+}
+
+
+// for ten sided dice
+
+
+function tenAnimation(numDice, duration) {
+
+
+    var animationArea = document.createElement("div");
+    animationArea.className = "four-animation";
+
+    var rollDiv = document.createElement("div");
+    rollDiv.className = "four-animation-roll";
+
+    var rollTitle = document.createElement("h2");
+        rollTitle.className = "title4";
+        rollTitle.innerHTML = "FINGERS CROSSED !";
+
+        animationArea.appendChild(rollTitle);
+
+    // Create four-sided-number divs initially
+    for (let i = 0; i < numDice; i++) {
+        var diceDiv = document.createElement("div");
+        diceDiv.className = "four-roll";
+
+        var diceShape = document.createElement("i");
+        diceShape.className = "bi bi-pentagon";
+
+        var diceNumber = document.createElement("p");
+        diceNumber.className = "four-sided-number";
+
+        diceDiv.appendChild(diceShape);
+        diceDiv.appendChild(diceNumber);
+        rollDiv.appendChild(diceDiv);
+    }
+
+    function updateDiceNumbers() {
+        for (let i = 0; i < numDice; i++) {
+            let randomNumber = Math.floor(Math.random() * 10) + 1; // Adjust the range as needed
+            var diceDiv = rollDiv.children[i];
+            var diceNumber = diceDiv.querySelector(".four-sided-number");
+            diceNumber.innerHTML = randomNumber;
+        }
+    }
+
+    // Set an interval to update dice numbers every 100 milliseconds (adjust as needed)
+    var intervalId = setInterval(updateDiceNumbers, 100);
+
+    animationArea.appendChild(rollDiv);
+    document.body.appendChild(animationArea);
+
+    // Clear the interval after the specified duration
+    setTimeout(function () {
+        clearInterval(intervalId);
+        document.body.removeChild(animationArea);
+    }, duration);
+}
+
+
+// for twelve sided animation
+
+function twelveAnimation(numDice, duration) {
+
+
+    var animationArea = document.createElement("div");
+    animationArea.className = "four-animation";
+
+    var rollDiv = document.createElement("div");
+    rollDiv.className = "four-animation-roll";
+
+    var rollTitle = document.createElement("h2");
+        rollTitle.className = "title4";
+        rollTitle.innerHTML = "FINGERS CROSSED !";
+
+        animationArea.appendChild(rollTitle);
+
+    // Create four-sided-number divs initially
+    for (let i = 0; i < numDice; i++) {
+        var diceDiv = document.createElement("div");
+        diceDiv.className = "four-roll";
+
+        var diceShape = document.createElement("i");
+        diceShape.className = "bi bi-hexagon";
+
+        var diceNumber = document.createElement("p");
+        diceNumber.className = "four-sided-number";
+
+        diceDiv.appendChild(diceShape);
+        diceDiv.appendChild(diceNumber);
+        rollDiv.appendChild(diceDiv);
+    }
+
+    function updateDiceNumbers() {
+        for (let i = 0; i < numDice; i++) {
+            let randomNumber = Math.floor(Math.random() * 12) + 1; // Adjust the range as needed
+            var diceDiv = rollDiv.children[i];
+            var diceNumber = diceDiv.querySelector(".four-sided-number");
+            diceNumber.innerHTML = randomNumber;
+        }
+    }
+
+    // Set an interval to update dice numbers every 100 milliseconds (adjust as needed)
+    var intervalId = setInterval(updateDiceNumbers, 100);
+
+    animationArea.appendChild(rollDiv);
+    document.body.appendChild(animationArea);
+
+    // Clear the interval after the specified duration
+    setTimeout(function () {
+        clearInterval(intervalId);
+        document.body.removeChild(animationArea);
+    }, duration);
+}
+
+
+// for twenty dice animation
+
+function twentyAnimation(numDice, duration) {
+
+
+    var animationArea = document.createElement("div");
+    animationArea.className = "four-animation";
+
+    var rollDiv = document.createElement("div");
+    rollDiv.className = "four-animation-roll";
+
+    var rollTitle = document.createElement("h2");
+        rollTitle.className = "title4";
+        rollTitle.innerHTML = "FINGERS CROSSED !";
+
+        animationArea.appendChild(rollTitle);
+
+    // Create four-sided-number divs initially
+    for (let i = 0; i < numDice; i++) {
+        var diceDiv = document.createElement("div");
+        diceDiv.className = "four-roll";
+
+        var diceShape = document.createElement("i");
+        diceShape.className = "bi bi-octagon";
+
+        var diceNumber = document.createElement("p");
+        diceNumber.className = "four-sided-number";
+
+        diceDiv.appendChild(diceShape);
+        diceDiv.appendChild(diceNumber);
+        rollDiv.appendChild(diceDiv);
+    }
+
+    function updateDiceNumbers() {
+        for (let i = 0; i < numDice; i++) {
+            let randomNumber = Math.floor(Math.random() * 20) + 1; // Adjust the range as needed
+            var diceDiv = rollDiv.children[i];
+            var diceNumber = diceDiv.querySelector(".four-sided-number");
+            diceNumber.innerHTML = randomNumber;
+        }
+    }
+
+    // Set an interval to update dice numbers every 100 milliseconds (adjust as needed)
+    var intervalId = setInterval(updateDiceNumbers, 100);
+
+    animationArea.appendChild(rollDiv);
+    document.body.appendChild(animationArea);
+
+    // Clear the interval after the specified duration
+    setTimeout(function () {
+        clearInterval(intervalId);
+        document.body.removeChild(animationArea);
+    }, duration);
+}
+
+
+// for color animation
+
+function colorAnimation(){
+    var animationArea = document.createElement("div");
+    animationArea.className = "four-animation";
+
+    var rollDiv = document.createElement("div");
+    rollDiv.className = "four-animation-roll";
+
+    var rollTitle = document.createElement("h2");
+    rollTitle.className = "title4";
+    rollTitle.innerHTML = "FEELING LUCKY !";
+
+    animationArea.appendChild(rollTitle);
+
+    var diceDiv = document.createElement("div");
+    diceDiv.className = "four-roll";
+
+    var diceShape = document.createElement("i");
+    diceShape.className = "fa-solid fa-dice-one color-roll";
+
+    var diceNumber = document.createElement("p");
+    diceNumber.className = "four-sided-number";
+
+    diceDiv.appendChild(diceShape);
+    diceDiv.appendChild(diceNumber);
+    rollDiv.appendChild(diceDiv);
+
+    animationArea.appendChild(rollDiv);
+    document.body.appendChild(animationArea);
+
+    setTimeout(function () {
+        document.body.removeChild(animationArea);
+    }, 1700);
+}
