@@ -9,7 +9,12 @@ function rollDice() {
 
     var totalResult = 0;
 
+    var rollSound = new Audio('./sounds/roll-sound.mp3');
+    rollSound.load();
 
+    setTimeout(function() {
+        rollSound.play();
+    }, 500);
 
     if (numSides === '4') {
         for (let i = 0; i < numDice; i++) {
@@ -37,6 +42,8 @@ function rollDice() {
         // Display the total result (sum of all dice rolls)
         var resultArea = document.getElementById('result');
         resultArea.textContent = 'RESULT: ' + totalResult;
+
+        rollSound.play();
 
         fourAnimation(numDice, 1700);
     } else if (numSides === '6') {
