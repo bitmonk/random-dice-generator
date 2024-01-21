@@ -115,6 +115,7 @@
 
     <div class="result-wrapper">
     <p id="result">RESULT</p>
+
     </div>
     <div class="roll-button-wrapper">
           <input class="roll-button" type="button" value="ROLL !" onclick="rollDice()">  

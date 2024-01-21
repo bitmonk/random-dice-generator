@@ -1,5 +1,4 @@
 
-
 function rollDice() {
     var numDice = document.getElementById('dice-amount').value;
     var numSides = document.getElementById('sided').value;
@@ -15,6 +14,14 @@ function rollDice() {
     setTimeout(function() {
         rollSound.play();
     }, 500);
+
+
+    var resultArea = document.getElementById('result');
+    if (numDice > '1' && numSides === 'colour') {
+        resultArea.style.display = "none";
+    }else{
+        resultArea.style.display = "flex";
+    }
 
     if (numSides === '4') {
         for (let i = 0; i < numDice; i++) {
@@ -215,13 +222,11 @@ else if (numSides === 'colour') {
     }
 
     // The following part remains the same
-    var allDiceDivs = document.getElementsByClassName('dice');
 
     var resultArea = document.getElementById('result');
     resultArea.textContent = 'RESULT: ' + randomColorName;
 
     colorAnimation(numDice);
-
     }else if(numDice > '1'){
             var colorNames = ['Red', 'Blue', 'Green', 'Yellow', 'Purple', 'Orange', 'Purple', 'Maroon', 'Gray', 'Fuchsia'];
         
@@ -240,13 +245,11 @@ else if (numSides === 'colour') {
         
                 diceDiv.style.color = randomColorName;
             }
-            colorAnimation(numDice);
 
-            var resultDiv = document.getElementById("result");
-            resultDiv.remove();
-         
+        
+
+            colorAnimation(numDice);
     }
-           
 
 }else {
         document.getElementById('result').innerHTML = 'Result:' + totalResult;
