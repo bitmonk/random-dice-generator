@@ -193,32 +193,62 @@ else if (numSides === '20') {
     twentyAnimation(numDice, 1700);
 }
 else if (numSides === 'colour') {
-    var colorNames = ['Red', 'Blue', 'Green', 'Yellow', 'Purple', 'Orange', 'Purple', 'Maroon','Gray','Fuchsia'];
-    const randomIndex = Math.floor(Math.random() * colorNames.length);
-    var randomColorName = colorNames[randomIndex];
+    
+    
+    if(numDice === '1'){
+    var colorNames = ['Red', 'Blue', 'Green', 'Yellow', 'Purple', 'Orange', 'Purple', 'Maroon', 'Gray', 'Fuchsia'];
 
-    var diceDiv = document.createElement("div");
-    diceDiv.className = "dice";
+    for (let i = 0; i < numDice; i++) {
+        var diceDiv = document.createElement("div");
+        diceDiv.className = "dice";
 
-    var diceIcon = document.createElement("i");
-    diceIcon.className = "fa-solid fa-dice-one fa-5x icon";
-    diceDiv.appendChild(diceIcon);
-    fourSidedArea.appendChild(diceDiv);
+        var diceIcon = document.createElement("i");
+        diceIcon.className = "fa-solid fa-dice-one fa-5x icon";
+        diceDiv.appendChild(diceIcon);
+        fourSidedArea.appendChild(diceDiv);
 
-    diceDiv.style.color = randomColorName;
+        // Generate a new random color for each dice inside the loop
+        const randomIndex = Math.floor(Math.random() * colorNames.length);
+        var randomColorName = colorNames[randomIndex];
 
-    var allDiceDivs = document.getElementsByClassName('dice');
-    for (let j = 0; j < allDiceDivs.length; j++) {
-        allDiceDivs[j].style.color = randomColorName;
+        diceDiv.style.color = randomColorName;
     }
 
+    // The following part remains the same
+    var allDiceDivs = document.getElementsByClassName('dice');
 
     var resultArea = document.getElementById('result');
     resultArea.textContent = 'RESULT: ' + randomColorName;
 
-    colorAnimation();
-} 
-    else {
+    colorAnimation(numDice);
+
+    }else if(numDice > '1'){
+            var colorNames = ['Red', 'Blue', 'Green', 'Yellow', 'Purple', 'Orange', 'Purple', 'Maroon', 'Gray', 'Fuchsia'];
+        
+            for (let i = 0; i < numDice; i++) {
+                var diceDiv = document.createElement("div");
+                diceDiv.className = "dice";
+        
+                var diceIcon = document.createElement("i");
+                diceIcon.className = "fa-solid fa-dice-one fa-5x icon";
+                diceDiv.appendChild(diceIcon);
+                fourSidedArea.appendChild(diceDiv);
+        
+                // Generate a new random color for each dice inside the loop
+                const randomIndex = Math.floor(Math.random() * colorNames.length);
+                var randomColorName = colorNames[randomIndex];
+        
+                diceDiv.style.color = randomColorName;
+            }
+            colorAnimation(numDice);
+
+            var resultDiv = document.getElementById("result");
+            resultDiv.remove();
+         
+    }
+           
+
+}else {
         document.getElementById('result').innerHTML = 'Result:' + totalResult;
     }
 }
@@ -507,7 +537,7 @@ function twentyAnimation(numDice, duration) {
 
 // for color animation
 
-function colorAnimation(){
+function colorAnimation(numDice) {
     var animationArea = document.createElement("div");
     animationArea.className = "four-animation";
 
@@ -523,16 +553,18 @@ function colorAnimation(){
     var diceDiv = document.createElement("div");
     diceDiv.className = "four-roll";
 
-    var diceShape = document.createElement("i");
-    diceShape.className = "fa-solid fa-dice-one color-roll";
+    for (let i = 0; i < numDice; i++) {
+        var diceShape = document.createElement("i");
+        diceShape.className = "fa-solid fa-dice-one color-roll";
 
-    var diceNumber = document.createElement("p");
-    diceNumber.className = "four-sided-number";
+        var diceNumber = document.createElement("p");
+        diceNumber.className = "four-sided-number";
 
-    diceDiv.appendChild(diceShape);
-    diceDiv.appendChild(diceNumber);
+        diceDiv.appendChild(diceShape);
+        diceDiv.appendChild(diceNumber);
+    }
+
     rollDiv.appendChild(diceDiv);
-
     animationArea.appendChild(rollDiv);
     document.body.appendChild(animationArea);
 
@@ -540,6 +572,7 @@ function colorAnimation(){
         document.body.removeChild(animationArea);
     }, 1700);
 }
+
 
 
 // for six sided dice 
