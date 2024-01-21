@@ -9,14 +9,13 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.cdnfonts.com/css/marvin" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-                
-
 </head>
 <body>
 
     <img src="./images/logo.png" class="logo-image" alt="404">
     
     <div class="wrapper">
+
         <div>
         <h3 class="title2">CHOOSE YOUR DICE</h3>
             <div class="select-wrapper">

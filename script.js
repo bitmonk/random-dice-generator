@@ -73,6 +73,8 @@ function rollDice() {
         resultArea.textContent = 'RESULT: ' + totalResult;
 
 
+        sixAnimation();
+
     } else if (numSides === '8') {
         for (let i = 0; i < numDice; i++) {
             let randomNumber = Math.floor(Math.random() * 8) + 1;
@@ -537,4 +539,24 @@ function colorAnimation(){
     setTimeout(function () {
         document.body.removeChild(animationArea);
     }, 1700);
+}
+
+
+// for six sided dice 
+
+function sixAnimation(){
+    var animationArea = document.createElement("div");
+    animationArea.className = "four-animation";
+
+    var rollDiv = document.createElement("div");
+    rollDiv.className = "four-animation-roll";
+
+    var rollTitle = document.createElement("h2");
+    rollTitle.className = "title4";
+    rollTitle.innerHTML = "FINGERS CROSSED !";
+
+    animationArea.appendChild(rollTitle);
+
+    animationArea.appendChild(rollDiv);
+    document.body.appendChild(animationArea);
 }
