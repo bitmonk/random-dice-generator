@@ -16,7 +16,9 @@
 <body>
 
      
-
+<audio id="myAudio">
+  <source src="./sounds/roll-sound.mp3" type="audio/mpeg">
+</audio>
 <div class="intro-area">
 
 <h1 class="title">LETS ROLL !</h1>

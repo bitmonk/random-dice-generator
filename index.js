@@ -1,5 +1,8 @@
+
+
 document.addEventListener("DOMContentLoaded", function () {
     var diceIcons = document.querySelectorAll('.dice-icon');
+    
 
     function showHideIcons(index) {
         if (index < diceIcons.length) {
@@ -23,6 +26,5 @@ document.addEventListener("DOMContentLoaded", function () {
             }, Math.floor(Math.random() * 100) + 50 * index); // Adjusted delay for showing
         }
     }
-
     showHideIcons(0);
 });

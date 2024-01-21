@@ -1,3 +1,8 @@
+@font-face {
+  font-family: myFont;
+  src: url(./fonts/marvin.otf) format('opentype');
+}
+
 body{
     display: flex;
     align-items: center;
@@ -8,6 +13,7 @@ body{
     color: #ffffff;
     text-shadow: -1px -1px 0 #08f, 1px -1px 0 #08f, -1px 1px 0 #08f, 3px 3px 0 #08f;
     letter-spacing: .02em;
+    font-family: myFont;
 }
 
 .intro-area{
