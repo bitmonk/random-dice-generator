@@ -73,7 +73,7 @@ function rollDice() {
         resultArea.textContent = 'RESULT: ' + totalResult;
 
 
-        sixAnimation();
+        sixAnimation(numDice);
 
     } else if (numSides === '8') {
         for (let i = 0; i < numDice; i++) {
@@ -544,7 +544,7 @@ function colorAnimation(){
 
 // for six sided dice 
 
-function sixAnimation(){
+function sixAnimation(numDice) {
     var animationArea = document.createElement("div");
     animationArea.className = "four-animation";
 
@@ -555,8 +555,42 @@ function sixAnimation(){
     rollTitle.className = "title4";
     rollTitle.innerHTML = "FINGERS CROSSED !";
 
-    animationArea.appendChild(rollTitle);
+    var diceClassNames = ["fa-dice-one", "fa-dice-two", "fa-dice-three", "fa-dice-four", "fa-dice-five", "fa-dice-six"];
 
+    var intervalId;
+    var counter = 0;
+
+    function showRandomDice() {
+        // Clear previous dice
+        rollDiv.innerHTML = "";
+
+        // Show random dice icon
+        for (let i = 0; i < numDice; i++) {
+            var randomIndex = Math.floor(Math.random() * 6);
+            var diceIcon = document.createElement("i");
+            diceIcon.className = "six-roll fa-solid " + diceClassNames[randomIndex];
+            rollDiv.appendChild(diceIcon);
+        }
+
+        // Increment counter
+        counter++;
+
+        // Stop after a certain number of iterations (adjust as needed)
+        if (counter === 15) {
+            clearInterval(intervalId);
+        }
+    }
+
+    // Set up the animation loop
+    intervalId = setInterval(showRandomDice, 200); // Adjust the interval duration as needed
+
+    animationArea.appendChild(rollTitle);
     animationArea.appendChild(rollDiv);
+
     document.body.appendChild(animationArea);
+
+
+    setTimeout(function () {
+        document.body.removeChild(animationArea);
+    }, 2000);
 }
